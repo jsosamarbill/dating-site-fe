@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flame</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- Theme style sheets -->
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="body">
+
+  <header class="header">
+    <div class="header__container container">
+      
+      <a class="header__logo header__logo-black" href="#">
+        <div class="header__logo-wrapper">
+          <img src="img/logo.png" alt="">
+          <span>FLAME</span>
+        </div>
+      </a>
+
+      <nav class="header__nav-main">
+        <div class="header__nav-main-wrapper">
+          
+          <a class="header__nav-button" href="#">
+            <div class="header__nav-button__circle circle-pink">
+              <img src="img/icon--person.svg" alt="">
+            </div>
+            <p>People</p>
+          </a>
+          
+          <a class="header__nav-button" href="#">
+            <div class="header__nav-button__notification">
+              1
+            </div>
+            <div class="header__nav-button__circle icon-heart">
+              <img src="img/icon--heart.svg" alt="">
+            </div>
+            <p>Match</p>
+          </a>
+
+          <a class="header__nav-button" href="#">
+            <div class="header__nav-button__notification">
+              1
+            </div>
+            <div class="header__nav-button__circle">
+              <img src="img/icon--message.svg" alt="">
+            </div>
+            <p>People</p>
+          </a>
+
+        </div>
+      </nav>
+
+      <nav class="header__nav-account">
+
+        <div class="header__nav-account-wrapper">
+
+          <a class="header__nav-button" href="#">
+            <div class="header__nav-button__circle icon-coin">
+              <img src="img/icon--coin.png" alt="">
+            </div>
+            <p>Credits</p>
+          </a>
+
+          <a class="header__nav-button" href="#">
+            <div class="header__nav-button__circle icon-profilepic">
+              <img src="img/profile-pic.png" alt="">
+            </div>
+            <p>My profile</p>
+          </a>
+
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <header class="header-mnml d-none">
+    <div class="header-mnml__container container">
+      <div class="header__logo-ribbon">
+        <div class="header__logo-ribbon-wrapper">
+          <img src="img/logo.png" alt="">
+          <span>Flame</span>
+        </div>
+      </div>
+      <div class="header__login">
+        <a href="" class="button button-small button-white">Log in</a>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <div class="cookies-modal">
+
+  </div>
+
+  <div class="sample-content">
+    <div class="container">
+
+      <h1>Heading 1</h1>
+
+      <h2>Heading 2</h2>
+
+      <p>Nisi ut ut sunt labore eiusmod elit irure.</p>
+
+      <a href="" class="button button">
+        Button large
+      </a>
+
+      <a href="" class="button button-small">
+        Button large
+      </a>
+
+    </div>
+  </div>
+
+  <section class="signup-section">
+    <div class="container signup-section__container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="signup-section__text">
+
+            <h2>
+              Satisfy your need <br> for connection 💞
+            </h2>
+  
+            <p>Why not give <strong>Flame</strong> a try? Create a profile and start fun converstations right away. </p>
+            <p>Find out how refreshing our different matching website can be.</p>
+  
+            <h4>What do you have to lose anyway</h4>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <div class="signup-section__form-wrapper">
+            <form action="" class="signup-section__form">
+              <h3>Sign up now for <em>Free</em>!</h3>
+  
+              <div class="form-element">
+                <div class="form-label"><label for="name">My name is</label></div>
+                <div class="form-input">
+                  <input class="form-control" type="text" name="name">
+                </div>
+              </div>
+  
+              <div class="form-element">
+                <div class="form-label"><label for="gender">I am</label></div>
+                <div class="radio-buttons">
+                  <input label="Male" type="radio" name="gender" value="male" checked>
+                  <input label="Female" type="radio" name="gender" value="female">
+                  <input label="Other" type="radio" name="gender" value="other">
+                </div>
+              </div>
+  
+              <div class="form-element">
+                <div class="form-label">
+                  <label for="birthday">My birthdate is</label>
+                </div>
+                <div class="date">
+                  <input class="form-control" type="date" id="birthday" name="birthday">
+                </div>
+              </div>
+  
+              <hr>
+  
+              <div class="form-element stacked">
+                <div class="form-label">
+                  <label for="email">
+                    Email
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input class="form-control" type="email" name="email">
+                </div>
+              </div>
+  
+              <div class="form-element stacked">
+                <div class="form-label">
+                  <label for="password">
+                    Password
+                  </label>
+                </div>
+                <div class="form-input">
+                  <input class="form-control" type="password" name="password">
+                </div>
+              </div>
+  
+              <div class="form-submit__btn">
+                <button class="button button-small" id="btn-submit" type="submit">
+                  Sign me up!
+                </button>
+              </div>
+  
+              <div class="form-consent">
+
+                <div class="form-checkbox">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="indicator"></span>
+                    I consent to the <a href="">Privacy Policy</a> including use of profiling to find more matches
+                  </label>
+                </div>
+
+                <div class="form-checkbox">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="indicator"></span>
+                    I agree to the Flame <a href="">Terms of Use</a>. I also agree to receive newsletters, account, updates and offers sent by Flame.
+                  </label>
+                </div>
+  
+              </div>
+  
+              
+  
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rating-modal">
+      
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__logo-section">
+        <a href="" class="footer__logo">
+          <div class="footer__logo-wrapper">
+            <img src="img/logo.png" alt="">
+            <span>FLAME</span>
+          </div>
+        </a>
+        <div class="footer__company-info">
+          <p>Operated by Designna Ltd, Roadstreet name 23,
+          <br>
+          London, United Kingdom</p>
+        </div>
+        <hr>
+        <div class="footer__payments">
+          <img src="img/visa-black.png" alt="">
+          <img src="img/mastercard-black.png" alt="">
+        </div>
+      </div>
+      <nav class="footer__site-map">
+        <div class="footer__site-map__col">
+          <h5>About</h5>
+          <ul>
+            <a href="">
+              <li>About Us</li>
+            </a>
+            <a href="">
+              <li>Safe Dating</li>
+            </a>
+            <a href="">
+              <li>FAQ</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer__site-map__col">
+          <h5>About</h5>
+          <ul>
+            <a href="">
+              <li>Terms and Conditions</li>
+            </a>
+            <a href="">
+              <li>Privacy Policy</li>
+            </a>
+            <a href="">
+              <li>Disclaimers</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer__site-map__col">
+          <h5>About</h5>
+          <ul>
+            <a href="">
+              <li>support@flame.com</li>
+            </a>
+            <a href="">
+              <li>+44 1632 960536</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+
+</html>

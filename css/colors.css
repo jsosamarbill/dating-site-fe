@@ -1,0 +1,13 @@
+/* Variables for Theme Styles */
+
+:root {
+  --black: #000000;
+  --dark: #3D3D3D;
+  --gray: #ABB5BE;
+  --gray-2: #A7A7A7;
+  --white: #ffffff;
+  --pink: #EB477B;
+  --pink-light: #FFEDED;
+  --green: #59B72D;
+  --pink-gradient: linear-gradient(180deg, rgba(237,111,98,1) 0%, rgba(233,67,123,1) 100%);
+}
