@@ -23,7 +23,7 @@
 
 <body class="body">
 
-  <header class="header">
+  <header class="header d-none">
     <div class="header__container container">
       
       <a class="header__logo header__logo-black" href="#">
@@ -36,28 +36,28 @@
       <nav class="header__nav-main">
         <div class="header__nav-main-wrapper">
           
-          <a class="header__nav-button" href="#">
-            <div class="header__nav-button__circle circle-pink">
+          <a class="app-button" href="#">
+            <div class="app-button__circle circle-pink">
               <img src="img/icon--person.svg" alt="">
             </div>
             <p>People</p>
           </a>
           
-          <a class="header__nav-button" href="#">
-            <div class="header__nav-button__notification">
+          <a class="app-button" href="#">
+            <div class="app-button__notification">
               1
             </div>
-            <div class="header__nav-button__circle icon-heart">
+            <div class="app-button__circle icon-heart">
               <img src="img/icon--heart.svg" alt="">
             </div>
             <p>Match</p>
           </a>
 
-          <a class="header__nav-button" href="#">
-            <div class="header__nav-button__notification">
+          <a class="app-button" href="#">
+            <div class="app-button__notification">
               1
             </div>
-            <div class="header__nav-button__circle">
+            <div class="app-button__circle">
               <img src="img/icon--message.svg" alt="">
             </div>
             <p>People</p>
@@ -70,15 +70,15 @@
 
         <div class="header__nav-account-wrapper">
 
-          <a class="header__nav-button" href="#">
-            <div class="header__nav-button__circle icon-coin">
+          <a class="app-button" href="#">
+            <div class="app-button__circle icon-coin">
               <img src="img/icon--coin.png" alt="">
             </div>
             <p>Credits</p>
           </a>
 
-          <a class="header__nav-button" href="#">
-            <div class="header__nav-button__circle icon-profilepic">
+          <a class="app-button" href="#">
+            <div class="app-button__circle icon-profilepic">
               <img src="img/profile-pic.png" alt="">
             </div>
             <p>My profile</p>
@@ -90,7 +90,7 @@
     </div>
   </header>
 
-  <header class="header-mnml d-none">
+  <header class="header-mnml">
     <div class="header-mnml__container container">
       <div class="header__logo-ribbon">
         <div class="header__logo-ribbon-wrapper">
@@ -104,13 +104,192 @@
     </div>
   </header>
 
+  <section class="signup-quiz">
+    <div class="signup-quiz__wrapper">
 
+      <div class="signup-quiz__header">
+        <div class="signup-quiz__steps">
+          <span id="steps-current">1</span>/<span id="steps-total">4</span>
+        </div>
+      </div>
+
+      <div class="signup-quiz__progress-bar">
+        <span></span> 
+        <span id="quiz-progress"></span>
+      </div>
+
+      <div class="signup-quiz__main">
+        <div class="signup-quiz__main-wrapper">
+          <form>
+            <div class="signup-quiz__main__content" id="signup-step-1">
+              <h4>What do you desire?</h4>
+              <div class="radio-buttons radio-buttons-gender">
+                <div class="radio-button__container">
+                  <input class="radio-icon-male" label="Male" type="radio" name="gender" value="male">
+                  <label for="gender">
+                    Men
+                  </label>
+                </div>
+                <div class="radio-button__container">
+                  <input class="radio-icon-female" label="Female" type="radio" name="gender" value="female">
+                  <label for="gender">
+                    Women
+                  </label>
+                </div>
+                <div class="radio-button__container">
+                  <input class="radio-icon-bisex" label="Other" type="radio" name="gender" value="other">
+                  <label for="gender">
+                    Both
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="signup-quiz__main__content d-none" id="signup-step-3">
+              <h4>Tell us more about you</h4>
+              <div class="checkbox-group">
+                <div class="container">
+                  <ul class="ks-cboxtags">
   
-  <div class="cookies-modal">
+                    <li>
+                      <input type="checkbox" id="traits-checkboxOne" value="honest"><label for="traits-checkboxOne">honest</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxTwo" value="shy"><label for="traits-checkboxTwo">shy</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxThree" value="loyal" ><label for="traits-checkboxThree">loyal</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxFour" value="funny"><label for="traits-checkboxFour">funny</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxFive" value="caring"><label for="traits-checkboxFive">caring</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxSix" value="kind" ><label for="traits-checkboxSix">kind</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxSeven" value="calm"><label for="traits-checkboxSeven">calm</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxEight" value="adventureous"><label for="traits-checkboxEight">adventureous</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxNine" value="moody"><label for="traits-checkboxNine">moody</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxTen" value="spontaenous"><label for="traits-checkboxTen">spontaneous</label>
+                    </li>
+                    
+                    <li 
+                    class="ks-selected"><input type="checkbox" id="traits-checkboxEleven" value="curious"><label for="traits-checkboxEleven">curious</label>
+                  </li>
+                  
+                    <li>
+                      <input type="checkbox" id="traits-checkboxTwelve" value="confident"><label for="traits-checkboxTwelve">confident</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxThirteen" value="thoughtful"><label for="traits-checkboxThirteen">thoughtful</label>
+                    </li>
+                                      
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+            <div class="signup-quiz__main__content d-none" id="signup-step-3">
+              <h4>Tell us more about you</h4>
+              <div class="checkbox-group">
+                <div class="container">
+                  <ul class="ks-cboxtags">
+  
+                    <li>
+                      <input type="checkbox" id="interests-checkboxOne" value="art"><label for="interests-checkboxOne">🖼 art</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxTwo" value="travel" ><label for="interests-checkboxTwo">✈️ travel</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxThree" value="sports" ><label for="interests-checkboxThree">⚽ sports</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxFour" value="music"><label for="interests-checkboxFour">🎵 music</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxFive" value="photography"><label for="interests-checkboxFive">📷 photography</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxSix" value="cooking" ><label for="interests-checkboxSix">🍳 cooking</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxSeven" value="movies"><label for="interests-checkboxSeven">🎥 movies</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxEight" value="technology"><label for="interests-checkboxEight">💻 technology</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxNine" value="books"><label for="interests-checkboxNine">📖 books</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxTen" value="creativity"><label for="interests-checkboxTen">🎨 creativity</label>
+                    </li>
+                    
+                    <li 
+                    class="ks-selected"><input type="checkbox" id="interests-checkboxEleven" value="fashion"><label for="interests-checkboxEleven">👟 fashion</label>
+                  </li>
+                         
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
 
-  </div>
+      <div class="signup-quiz__footer">
+        <div class="signup-quiz__footer-wrapper">
+          <div class="signup-quiz__footer__button">
+            <button class="button" id="quiz-next">
+              Next
+            </button>
+            <button type="submit" class="button d-none" id="quiz-submit">
+              Finish
+            </button>
+          </div>
+          <div class="signup-quiz__footer__skip">
+            <button class="signup-quiz__footer__skip-button d-none" id="quiz-skip">
+              Skip
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="sample-content">
+
+
+  </section>
+
+  <section class="sample-content">
     <div class="container">
 
       <h1>Heading 1</h1>
@@ -128,7 +307,12 @@
       </a>
 
     </div>
+  </section>
+  
+  <div class="cookies-modal">
+
   </div>
+
 
   <section class="signup-section">
     <div class="container signup-section__container">
