@@ -6,8 +6,10 @@
   --gray: #ABB5BE;
   --gray-2: #A7A7A7;
   --gray-light: #ECECEC;
+  --gray-light-2: #ced4da;
   --white: #ffffff;
   --pink: #EB477B;
+  --red: rgb(207, 0, 0);
   --pink-light: #FFEDED;
   --green: #59B72D;
   --pink-gradient: linear-gradient(180deg, rgba(237,111,98,1) 0%, rgba(233,67,123,1) 100%);

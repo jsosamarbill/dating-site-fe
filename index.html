@@ -335,32 +335,12 @@
             <form action="" class="signup-section__form">
               <h3>Sign up now for <em>Free</em>!</h3>
   
-              <div class="form-element">
+              <div class="form-element stacked">
                 <div class="form-label"><label for="name">My name is</label></div>
                 <div class="form-input">
                   <input class="form-control" type="text" name="name">
                 </div>
               </div>
-  
-              <div class="form-element">
-                <div class="form-label"><label for="gender">I am</label></div>
-                <div class="radio-buttons">
-                  <input label="Male" type="radio" name="gender" value="male" checked>
-                  <input label="Female" type="radio" name="gender" value="female">
-                  <input label="Other" type="radio" name="gender" value="other">
-                </div>
-              </div>
-  
-              <div class="form-element">
-                <div class="form-label">
-                  <label for="birthday">My birthdate is</label>
-                </div>
-                <div class="date">
-                  <input class="form-control" type="date" id="birthday" name="birthday">
-                </div>
-              </div>
-  
-              <hr>
   
               <div class="form-element stacked">
                 <div class="form-label">
@@ -372,8 +352,74 @@
                   <input class="form-control" type="email" name="email">
                 </div>
               </div>
-  
+
               <div class="form-element stacked">
+                <div class="form-label">
+                  <label for="email">
+                    Country
+                  </label>
+                </div>
+                <div class="form-input">
+                  <div class="form__select peoples__filter-select">
+                                    
+                    <label class="select" for="slct">
+                      <select class="form-control" id="slct" required="required">
+                        <option value="" disabled="disabled" selected="selected">Select option</option>
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                        <option value="#">Four</option>
+                        <option value="#">Five</option>
+                        <option value="#">Six</option>
+                        <option value="#">Seven</option>
+                      </select>
+                      <svg>
+                        <use xlink:href="#select-arrow-down"></use>
+                      </svg>
+                    </label>
+                    <!-- SVG Sprites-->
+                    <svg class="sprites">
+                      <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                        <polyline points="1 1 5 5 9 1"></polyline>
+                      </symbol>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-element stacked">
+                <div class="form-label">
+                  <label for="email">
+                    Phone
+                  </label>
+                </div>
+                <div class="form-input">
+                  Insert phone input here
+                </div>
+              </div>
+
+              <!-- <div class="form-element">
+                <div class="form-label"><label for="gender">I am</label></div>
+                <div class="radio-buttons">
+                  <input label="Male" type="radio" name="gender" value="male" checked>
+                  <input label="Female" type="radio" name="gender" value="female">
+                  <input label="Other" type="radio" name="gender" value="other">
+                </div>
+              </div> -->
+  
+              <!-- <div class="form-element">
+                <div class="form-label">
+                  <label for="birthday">My birthdate is</label>
+                </div>
+                <div class="date">
+                  <input class="form-control" type="date" id="birthday" name="birthday">
+                </div>
+              </div> -->
+  
+              <!-- <hr> -->
+  
+  
+              <!-- <div class="form-element stacked">
                 <div class="form-label">
                   <label for="password">
                     Password
@@ -382,7 +428,7 @@
                 <div class="form-input">
                   <input class="form-control" type="password" name="password">
                 </div>
-              </div>
+              </div> -->
   
               <div class="form-submit__btn">
                 <button class="button button-small" id="btn-submit" type="submit">
