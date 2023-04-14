@@ -260,6 +260,7 @@ a:not(.button):hover {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 0;
   z-index: 1000;
 }
 
@@ -269,10 +270,10 @@ a:not(.button):hover {
 }
 
 .header-mnml .header-mnml__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   width: 100%;
+  height: 0;
+  position: relative;
   padding-top: 0;
   margin-top: 0;
 }
@@ -318,6 +319,12 @@ a:not(.button):hover {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.header-mnml .header__logo-ribbon {
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
 .header__logo-ribbon-wrapper img {
   display: block;
   margin: 20px auto 0;
@@ -332,6 +339,35 @@ a:not(.button):hover {
   font-weight: bold;
   font-size: 20px;
   margin: 10px auto 0;
+}
+
+.header-mnml .header__login {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .header__logo-ribbon {
+    width: 126px;
+    height: 150px;
+  }
+
+  .header-mnml .header__logo-ribbon {
+    left: 5px;
+  }
+
+  .header-mnml .header__login {
+    right: 5px;
+  }
+
+  .header__logo-ribbon-wrapper span {
+    font-size: 17px;
+  }
+
+  .header__logo-ribbon-wrapper img {
+    width: 45%;
+  }
 }
 
 /* Footer */
