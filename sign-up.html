@@ -104,6 +104,216 @@
     </div>
   </header>
 
+  <section class="signup-quiz">
+    <div class="signup-quiz__wrapper">
+
+      <div class="signup-quiz__header">
+        <div class="signup-quiz__steps">
+          <span id="steps-current">1</span>/<span id="steps-total">4</span>
+        </div>
+      </div>
+
+      <div class="signup-quiz__progress-bar">
+        <span></span> 
+        <span id="quiz-progress"></span>
+      </div>
+
+      <div class="signup-quiz__main">
+        <div class="signup-quiz__main-wrapper">
+          <form>
+            <div class="signup-quiz__main__content" id="signup-step-1">
+              <h4>What do you desire?</h4>
+              <div class="radio-buttons radio-buttons-gender">
+                <div class="radio-button__container">
+                  <input class="radio-icon-male" label="Male" type="radio" name="gender" value="male">
+                  <label for="gender">
+                    Men
+                  </label>
+                </div>
+                <div class="radio-button__container">
+                  <input class="radio-icon-female" label="Female" type="radio" name="gender" value="female">
+                  <label for="gender">
+                    Women
+                  </label>
+                </div>
+                <div class="radio-button__container">
+                  <input class="radio-icon-bisex" label="Other" type="radio" name="gender" value="other">
+                  <label for="gender">
+                    Both
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="signup-quiz__main__content d-none" id="signup-step-3">
+              <h4>Tell us more about you</h4>
+              <div class="checkbox-group">
+                <div class="container">
+                  <ul class="ks-cboxtags">
+  
+                    <li>
+                      <input type="checkbox" id="traits-checkboxOne" value="honest"><label for="traits-checkboxOne">honest</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxTwo" value="shy"><label for="traits-checkboxTwo">shy</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxThree" value="loyal" ><label for="traits-checkboxThree">loyal</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxFour" value="funny"><label for="traits-checkboxFour">funny</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxFive" value="caring"><label for="traits-checkboxFive">caring</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxSix" value="kind" ><label for="traits-checkboxSix">kind</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxSeven" value="calm"><label for="traits-checkboxSeven">calm</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxEight" value="adventureous"><label for="traits-checkboxEight">adventureous</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxNine" value="moody"><label for="traits-checkboxNine">moody</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxTen" value="spontaenous"><label for="traits-checkboxTen">spontaneous</label>
+                    </li>
+                    
+                    <li 
+                    class="ks-selected"><input type="checkbox" id="traits-checkboxEleven" value="curious"><label for="traits-checkboxEleven">curious</label>
+                  </li>
+                  
+                    <li>
+                      <input type="checkbox" id="traits-checkboxTwelve" value="confident"><label for="traits-checkboxTwelve">confident</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="traits-checkboxThirteen" value="thoughtful"><label for="traits-checkboxThirteen">thoughtful</label>
+                    </li>
+                                      
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+            <div class="signup-quiz__main__content d-none" id="signup-step-3">
+              <h4>Tell us more about you</h4>
+              <div class="checkbox-group">
+                <div class="container">
+                  <ul class="ks-cboxtags">
+  
+                    <li>
+                      <input type="checkbox" id="interests-checkboxOne" value="art"><label for="interests-checkboxOne">🖼 art</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxTwo" value="travel" ><label for="interests-checkboxTwo">✈️ travel</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxThree" value="sports" ><label for="interests-checkboxThree">⚽ sports</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxFour" value="music"><label for="interests-checkboxFour">🎵 music</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxFive" value="photography"><label for="interests-checkboxFive">📷 photography</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxSix" value="cooking" ><label for="interests-checkboxSix">🍳 cooking</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxSeven" value="movies"><label for="interests-checkboxSeven">🎥 movies</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxEight" value="technology"><label for="interests-checkboxEight">💻 technology</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxNine" value="books"><label for="interests-checkboxNine">📖 books</label>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="interests-checkboxTen" value="creativity"><label for="interests-checkboxTen">🎨 creativity</label>
+                    </li>
+                    
+                    <li 
+                    class="ks-selected"><input type="checkbox" id="interests-checkboxEleven" value="fashion"><label for="interests-checkboxEleven">👟 fashion</label>
+                  </li>
+                         
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="signup-quiz__footer">
+        <div class="signup-quiz__footer-wrapper">
+          <div class="signup-quiz__footer__button">
+            <button class="button" id="quiz-next">
+              Next
+            </button>
+            <button type="submit" class="button d-none" id="quiz-submit">
+              Finish
+            </button>
+          </div>
+          <div class="signup-quiz__footer__skip">
+            <button class="signup-quiz__footer__skip-button d-none" id="quiz-skip">
+              Skip
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="sample-content">
+    <div class="container">
+
+      <h1>Heading 1</h1>
+
+      <h2>Heading 2</h2>
+
+      <p>Nisi ut ut sunt labore eiusmod elit irure.</p>
+
+      <a href="" class="button button">
+        Button large
+      </a>
+
+      <a href="" class="button button-small">
+        Button large
+      </a>
+
+    </div>
+  </section>
+  
+  <div class="cookies-modal">
+
+  </div>
+
+
   <section class="signup-section">
     <div class="container signup-section__container">
       <div class="row">
@@ -258,13 +468,6 @@
       
     </div>
   </section>
-
-  
-
-  
-
-
-
 
   <footer class="footer">
     <div class="footer__container container">

@@ -76,7 +76,7 @@ if (document.querySelector('.signup-quiz')) {
 
 /* Double Range Slider */
 
-let rangeMin = 18;
+let rangeMin = 1;
 const range = document.querySelector(".range-selected");
 const rangeInput = document.querySelectorAll(".range-input input");
 const rangePrice = document.querySelectorAll(".peoples__filter-range__numbers input");
@@ -95,7 +95,8 @@ rangeInput.forEach((input) => {
       rangePrice[0].value = minRange;
       rangePrice[1].value = maxRange;
       range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
-      range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+
+      range.style.right = 100 - (maxRange / rangeInput[1].max) * 90 + "%";
     }
   });
 });
