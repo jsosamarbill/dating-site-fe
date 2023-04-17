@@ -114,23 +114,40 @@
               <img src="img/profile-pic-lrg.png" alt="">
             </div>
             <div class="profile__pictures__main-add">
-              <button>Add profile picture</button>
+              <button>
+                <span>
+                  <img src="img/icon--camera.png" alt="">
+                </span>
+                Add profile picture</button>
             </div>
 
+            <h5>Public Photos</h5>
             <div class="profile__pictures__sidebar">
-              <h5>Public Photos</h5>
               <div class="profile__pictures__sidebar__img">
+                <button class="profile__pictures__delete__button">
+                  X
+                </button>
                 <img src="img/profile-pic-lrg.png" alt="">
               </div>
               <div class="profile__pictures__sidebar__add">
-                <button>Add photos</button>
+                <button>
+                  <span>
+                    <img src="img/icon--plus.png" alt="">
+                  </span>
+                  Add photos
+                </button>
               </div>
             </div>
 
+            <h5>Private photos</h5>
             <div class="profile__pictures__sidebar">
-              <h5>Private photos</h5>
               <div class="profile__pictures__sidebar__add">
-                <button>Add photos</button>
+                <button>
+                  <span>
+                    <img src="img/icon--plus.png" alt="">
+                  </span>
+                  Add photos
+                </button>
               </div>
             </div>
 
@@ -146,8 +163,11 @@
             <div class="profile__info__header">
               <div class="profile__info__name">
                 <span class="status"></span>
-                <h5><strong>User name</strong>, 35</h5>
-                <span class="location">Barcelona</span>
+                <h4><strong>User name</strong>, 35</h4>
+                <span class="location">
+                  <img src="img/icon--location.png" alt="">
+                  <em>Barcelona</em>
+                </span>
               </div>
               <div class="profile__info__save">
                 <button class="button button-small">
@@ -188,7 +208,99 @@
                       </label>
                     </div>
                     <div class="form-input">
-                      <div class="form__select peoples__filter-select">
+                      <div class="form__select">
+                                        
+                        <label class="select" for="slct">
+                          <select class="form-control" id="slct" required="required">
+                            <option value="" disabled="disabled" selected="selected">Select option</option>
+                            <option value="#">One</option>
+                            <option value="#">Two</option>
+                            <option value="#">Three</option>
+                            <option value="#">Four</option>
+                            <option value="#">Five</option>
+                            <option value="#">Six</option>
+                            <option value="#">Seven</option>
+                          </select>
+                          <svg>
+                            <use xlink:href="#select-arrow-down"></use>
+                          </svg>
+                        </label>
+                        <!-- SVG Sprites-->
+                        <svg class="sprites">
+                          <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                            <polyline points="1 1 5 5 9 1"></polyline>
+                          </symbol>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-element__row">
+                  <div class="form-element stacked">
+                    <div class="form-label">
+                      <label for="email">
+                        Email
+                      </label>
+                    </div>
+                    <div class="form-input">
+                      <input class="form-control" type="email" name="email">
+                    </div>
+                  </div>
+                  <div class="form-element stacked">
+                    <div class="form-label">
+                      <label for="email">
+                        Country
+                      </label>
+                    </div>
+                    <div class="form-input">
+                      <div class="form__select">
+                                        
+                        <label class="select" for="slct">
+                          <select class="form-control" id="slct" required="required">
+                            <option value="" disabled="disabled" selected="selected">Select option</option>
+                            <option value="#">One</option>
+                            <option value="#">Two</option>
+                            <option value="#">Three</option>
+                            <option value="#">Four</option>
+                            <option value="#">Five</option>
+                            <option value="#">Six</option>
+                            <option value="#">Seven</option>
+                          </select>
+                          <svg>
+                            <use xlink:href="#select-arrow-down"></use>
+                          </svg>
+                        </label>
+                        <!-- SVG Sprites-->
+                        <svg class="sprites">
+                          <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                            <polyline points="1 1 5 5 9 1"></polyline>
+                          </symbol>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-element__row">
+                  <div class="form-element stacked">
+                    <div class="form-label">
+                      <label for="email">
+                        Email
+                      </label>
+                    </div>
+                    <div class="form-input">
+                      <input class="form-control" type="email" name="email">
+                    </div>
+                  </div>
+                  <div class="form-element stacked">
+                    <div class="form-label">
+                      <label for="email">
+                        Country
+                      </label>
+                    </div>
+                    <div class="form-input">
+                      <div class="form__select">
                                         
                         <label class="select" for="slct">
                           <select class="form-control" id="slct" required="required">
@@ -224,11 +336,11 @@
                   </div>
                   <div class="form-input">
                     <div class="checkbox-group">
-                      <div class="container">
+                      
                         <ul class="ks-cboxtags">
         
                           <li>
-                            <input type="checkbox" id="traits-checkboxOne" value="honest"><label for="traits-checkboxOne">honest</label>
+                            <input type="checkbox" id="traits-checkboxOne" value="honest" checked><label for="traits-checkboxOne">honest</label>
                           </li>
                           
                           <li>
@@ -236,7 +348,7 @@
                           </li>
                           
                           <li>
-                            <input type="checkbox" id="traits-checkboxThree" value="loyal" ><label for="traits-checkboxThree">loyal</label>
+                            <input type="checkbox" id="traits-checkboxThree" value="loyal" checked><label for="traits-checkboxThree">loyal</label>
                           </li>
                           
                           <li>
@@ -281,7 +393,123 @@
                                             
                         </ul>
                       
-                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-element stacked">
+                  <div class="form-label">
+                    <label for="traits">Traits</label>
+                  </div>
+                  <div class="form-input">
+                    <div class="checkbox-group">
+                      
+                      <ul class="ks-cboxtags">
+  
+                        <li>
+                          <input type="checkbox" id="interests-checkboxOne" value="art"><label for="interests-checkboxOne">🖼 art</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxTwo" value="travel" ><label for="interests-checkboxTwo">✈️ travel</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxThree" value="sports" checked><label for="interests-checkboxThree">⚽ sports</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxFour" value="music" checked><label for="interests-checkboxFour">🎵 music</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxFive" value="photography"><label for="interests-checkboxFive">📷 photography</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxSix" value="cooking" checked><label for="interests-checkboxSix">🍳 cooking</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxSeven" value="movies"><label for="interests-checkboxSeven">🎥 movies</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxEight" value="technology"><label for="interests-checkboxEight">💻 technology</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxNine" value="books"><label for="interests-checkboxNine">📖 books</label>
+                        </li>
+                        
+                        <li>
+                          <input type="checkbox" id="interests-checkboxTen" value="creativity"><label for="interests-checkboxTen">🎨 creativity</label>
+                        </li>
+                        
+                        <li 
+                        class="ks-selected"><input type="checkbox" id="interests-checkboxEleven" value="fashion"><label for="interests-checkboxEleven">👟 fashion</label>
+                      </li>
+                             
+                      </ul>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="form-element stacked">
+                  <div class="form-label">
+                    <label for="goals">Goals</label>
+                  </div>
+                  <div class="form-input">
+                    <div class="checkbox-group">
+                      
+                        <ul class="ks-cboxtags">
+        
+                          <li>
+                            <input type="checkbox" id="goals-checkboxOne" value="new-experience" checked><label for="goals-checkboxOne">new experience</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxTwo" value="fun-time"><label for="goals-checkboxTwo">fun time</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxThree" value="some-attention" ><label for="goals-checkboxThree">some attention</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxFour" value="sex"><label for="goals-checkboxFour">sex</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxFive" value="deep-connection"><label for="goals-checkboxFive">deep connection</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxSix" value="family" ><label for="goals-checkboxSix">family</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxSeven" value="something-casual"><label for="goals-checkboxSeven">something casual</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxEight" value="marriage"><label for="goals-checkboxEight">marriage</label>
+                          </li>
+                          
+                          <li>
+                            <input type="checkbox" id="goals-checkboxNine" value="other"><label for="goals-checkboxNine">other</label>
+                          </li>
+                          
+                         
+                                            
+                        </ul>
+                      
+                      
                     </div>
                   </div>
                 </div>
@@ -292,25 +520,32 @@
                   </div>
                   <div class="form-input">
                     <div class="peoples__filter-range">
-                      <div class="peoples__filter-range__slider">
-                        <div class="range">
-                          <div class="range-slider">
-                            <span class="range-selected"></span>
-                          </div>
-                          <div class="range-input">
-                            <input type="range" class="min" min="18" max="90" value="18" step="1">
-                            <input type="range" class="max" min="18" max="90" value="70" step="1">
-                          </div>
-                        </div> 
+
+                      <div class="peoples__filter-range__label">
+                        Age
                       </div>
-                      <div class="peoples__filter-range__numbers">      
-                        <!-- <label for="min">Min</label> -->
-                        <input type="number" name="min" value="18" disabled>
-                        <span>-</span>  
-                        <!-- <label for="max">Max</label> -->
-                        <input type="number" name="max" value="70" disabled>
-                        <span>years</span>
+      
+                      <div class="range_container">
+                        <div class="sliders_control">
+                           <input id="fromSlider" type="range" value="18" min="18" max="90"/>
+                           <input id="toSlider" type="range" value="90" min="18" max="90"/>
+                        </div>
+                        <div class="form_control">
+                          <div class="form_control_container">
+                              <input class="form_control_container__time__input" type="hidden" id="fromInput" value="18" min="18" max="90" disabled/>
+                            </div>
+                            <div class="form_control_container">
+                              <input class="form_control_container__time__input" type="hidden" id="toInput" value="90" min="18" max="90" disabled/>
+                            </div>
+                        </div>
                       </div>
+      
+                      <div class="peoples__filter-range__numbers">
+                        <span class="range-min"></span>
+                        -
+                        <span class="range-max"></span>
+                      </div>
+      
                     </div>
                   </div>
                 </div>
@@ -330,7 +565,9 @@
             <div class="profile__sidebar__body">
               <div class="profile__power-ups">
                 <ul>
-                  <li>Message in chats</li>
+                  <li>
+                    <img src="img/icon--check.png" alt="">
+                    Message in chats</li>
                 </ul>
               </div>
               <button class="button button-small">

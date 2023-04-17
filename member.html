@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flame</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- Theme style sheets -->
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="body">
+
+  <header class="header-mnml d-none">
+    <div class="header-mnml__container container">
+      <div class="header__logo-ribbon">
+        <div class="header__logo-ribbon-wrapper">
+          <img src="img/logo.png" alt="">
+          <span>Flame</span>
+        </div>
+      </div>
+      <div class="header__login">
+        <a href="" class="button button-small button-white">Log in</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="header">
+    <div class="header__container container">
+      
+      <a class="header__logo header__logo-black" href="#">
+        <div class="header__logo-wrapper">
+          <img src="img/logo.png" alt="">
+          <span>FLAME</span>
+        </div>
+      </a>
+
+      <nav class="header__nav-main">
+        <div class="header__nav-main-wrapper">
+          
+          <a class="app-button" href="#">
+            <div class="app-button__circle circle-pink">
+              <img src="img/icon--person.svg" alt="">
+            </div>
+            <p>People</p>
+          </a>
+          
+          <a class="app-button" href="#">
+            <div class="app-button__notification">
+              1
+            </div>
+            <div class="app-button__circle icon-heart">
+              <img src="img/icon--heart.svg" alt="">
+            </div>
+            <p>Match</p>
+          </a>
+
+          <a class="app-button" href="#">
+            <div class="app-button__notification">
+              1
+            </div>
+            <div class="app-button__circle">
+              <img src="img/icon--message.svg" alt="">
+            </div>
+            <p>People</p>
+          </a>
+
+        </div>
+      </nav>
+
+      <nav class="header__nav-account">
+
+        <div class="header__nav-account-wrapper">
+
+          <a class="app-button" href="#">
+            <div class="app-button__circle icon-coin">
+              <img src="img/icon--coin.png" alt="">
+            </div>
+            <p>Credits</p>
+          </a>
+
+          <a class="app-button" href="#">
+            <div class="app-button__circle icon-profilepic">
+              <img src="img/profile-pic.png" alt="">
+            </div>
+            <p>My profile</p>
+          </a>
+
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <section class="profile">
+    <div class="profile__container container">
+      <div class="row">
+
+        <div class="col-12 col-lg-3">
+          <div class="profile__pictures">
+            <div class="profile__pictures__main">
+              <img src="img/profile-pic-lrg.png" alt="">
+            </div>
+            <div class="profile__pictures__actions">
+              <button>
+                <span>
+                  <img src="img/icon--heart.svg" alt="">
+                </span>
+                Like</button>
+
+                <button>
+                  <span>
+                    <img src="img/icon--message.svg" alt="">
+                  </span>
+                  Chat</button>
+            </div>
+
+            <h5>Public Photos</h5>
+            <div class="profile__pictures__sidebar">
+              <div class="profile__pictures__sidebar__img">
+                <img src="img/profile-pic-lrg.png" alt="">
+              </div>
+
+              <div class="profile__pictures__sidebar__img">
+                <img src="img/profile-pic-lrg.png" alt="">
+              </div>
+              
+            </div>
+
+            <h5>Private photos</h5>
+            <div class="profile__pictures__sidebar private-photos">
+              <div class="profile__pictures__sidebar__img">
+                <img src="img/profile-pic-lrg.png" alt="">
+              </div>
+
+              <div class="profile__pictures__sidebar__img">
+                <img src="img/profile-pic-lrg.png" alt="">
+              </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+
+        <div class="profile__main col-12 col-lg-6">
+          <div class="profile__info">
+            <div class="profile__member-info">
+
+            
+            <div class="profile__info__header">
+              <div class="profile__info__name">
+                <span class="status"></span>
+                <h4><strong>User name</strong>, 35</h4>
+                <span class="location">
+                  <img src="img/icon--location.png" alt="">
+                  <em>Barcelona</em>
+                </span>
+              </div>
+              <div class="profile__info__more">
+                <div class="form__select">
+                                        
+                  <label class="select" for="slct">
+                    <select class="form-control" id="slct" required="required">
+                      <option value="" disabled="disabled" selected="selected">Select option</option>
+                      <option value="#">One</option>
+                      <option value="#">Two</option>
+                      <option value="#">Three</option>
+                      <option value="#">Four</option>
+                      <option value="#">Five</option>
+                      <option value="#">Six</option>
+                      <option value="#">Seven</option>
+                    </select>
+                    <svg>
+                      <use xlink:href="#select-arrow-down"></use>
+                    </svg>
+                  </label>
+                  <!-- SVG Sprites-->
+                  <svg class="sprites">
+                    <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                      <polyline points="1 1 5 5 9 1"></polyline>
+                    </symbol>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile__info__body">
+              <div class="profile__info__details">
+
+                <div class="profile__info__bio">
+                  <p>Eiusmod culpa commodo eu ullamco nostrud laborum deserunt. Ad ipsum veniam sit est reprehenderit laboris fugiat magna qui ut non culpa. Voluptate eiusmod et ad et ut cillum ex Lorem ea Lorem dolor incididunt quis consectetur. In laboris nisi est ullamco aute officia tempor amet excepteur cillum amet veniam proident. Adipisicing est quis excepteur ut dolore eu fugiat culpa mollit. Sunt sint sint sint exercitation aute cillum.</p>
+                </div>
+
+                <div class="profile__info__section">
+                  <h5>About Me</h5>
+                  <div class="trait-group">
+                    <ul>
+                      <li>woman</li>
+                      <li>shy</li>
+                      <li>loyal</li>
+                      <li>funny</li>
+                      <li>caring</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="profile__info__section">
+                  <h5>My passions</h5>
+                  <div class="trait-group">
+                    <ul>
+                      <li>📖 books</li>
+                      <li>🎨 creativity</li>
+                      <li>👟 fashion</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="profile__info__section">
+                  <h5>I'm looking for</h5>
+                  <div class="trait-group">
+                    <ul>
+                      <li>women</li>
+                      <li>friendship</li>
+                      <li>fun</li>
+                    </ul>
+                  </div>
+                </div>
+               
+               
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="profile__info">
+            <div class="profile__message-section">
+
+            
+            <div class="profile__info__header">
+              <div class="profile__info__name">
+                <h5 class="title-small">
+                  💬 Chat
+                </h5>
+              </div>
+            </div>
+
+            <div class="profile__info__body">
+              <div class="profile__message-box">
+                <div class="profile__message-box__img">
+                  <img src="img/icon-big--chat.png" alt="">
+                </div>
+                <div class="profile__message-box__text">
+                  <p>Start chat now and get to know this <strong>person</strong></p>
+                  <button class="button button-small button-wider">
+                    <strong>Say Hello!</strong> 👋
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          </div>
+
+          
+        </div>
+
+        <div class="col-12 col-lg-3">
+
+          <div class="profile__sidebar">
+            <div class="profile__sidebar__header">
+              Get Credits
+            </div>
+            <div class="profile__sidebar__body">
+              <div class="profile__power-ups">
+                <ul>
+                  <li>
+                    <img src="img/icon--check.png" alt="">
+                    Message in chats</li>
+                </ul>
+              </div>
+              <button class="button button-small">
+                Get Credits
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__logo-section">
+        <a href="" class="footer__logo">
+          <div class="footer__logo-wrapper">
+            <img src="img/logo.png" alt="">
+            <span>FLAME</span>
+          </div>
+        </a>
+        <div class="footer__company-info">
+          <p>Operated by Designna Ltd, Roadstreet name 23,
+          <br>
+          London, United Kingdom</p>
+        </div>
+        <hr>
+        <div class="footer__payments">
+          <img src="img/visa-black.png" alt="">
+          <img src="img/mastercard-black.png" alt="">
+        </div>
+      </div>
+      <nav class="footer__site-map">
+        <div class="footer__site-map__col">
+          <h5>About</h5>
+          <ul>
+            <a href="">
+              <li>About Us</li>
+            </a>
+            <a href="">
+              <li>Safe Dating</li>
+            </a>
+            <a href="">
+              <li>FAQ</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer__site-map__col">
+          <h5>About</h5>
+          <ul>
+            <a href="">
+              <li>Terms and Conditions</li>
+            </a>
+            <a href="">
+              <li>Privacy Policy</li>
+            </a>
+            <a href="">
+              <li>Disclaimers</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer__site-map__col">
+          <h5>About</h5>
+          <ul>
+            <a href="">
+              <li>support@flame.com</li>
+            </a>
+            <a href="">
+              <li>+44 1632 960536</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+
+</html>

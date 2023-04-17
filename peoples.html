@@ -163,25 +163,32 @@
               
 
               <div class="peoples__filter-range">
-                <div class="peoples__filter-range__slider">
-                  <div class="range">
-                    <div class="range-slider">
-                      <span class="range-selected"></span>
-                    </div>
-                    <div class="range-input">
-                      <input type="range" class="min" min="18" max="90" value="18" step="1">
-                      <input type="range" class="max" min="18" max="90" value="90" step="1">
-                    </div>
-                  </div> 
+
+                <div class="peoples__filter-range__label">
+                  Age
                 </div>
-                <div class="peoples__filter-range__numbers">      
-                  <!-- <label for="min">Min</label> -->
-                  <input type="number" name="min" value="18" disabled>
-                  <span>-</span>  
-                  <!-- <label for="max">Max</label> -->
-                  <input type="number" name="max" value="90" disabled>
-                  <span>years</span>
+
+                <div class="range_container">
+                  <div class="sliders_control">
+                     <input id="fromSlider" type="range" value="18" min="18" max="90"/>
+                     <input id="toSlider" type="range" value="90" min="18" max="90"/>
+                  </div>
+                  <div class="form_control">
+                    <div class="form_control_container">
+                        <input class="form_control_container__time__input" type="hidden" id="fromInput" value="18" min="18" max="90" disabled/>
+                      </div>
+                      <div class="form_control_container">
+                        <input class="form_control_container__time__input" type="hidden" id="toInput" value="90" min="18" max="90" disabled/>
+                      </div>
+                  </div>
                 </div>
+
+                <div class="peoples__filter-range__numbers">
+                  <span class="range-min"></span>
+                  -
+                  <span class="range-max"></span>
+                </div>
+
               </div>
 
               <div class="peoples__filter-button">

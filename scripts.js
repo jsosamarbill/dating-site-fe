@@ -72,48 +72,111 @@ if (document.querySelector('.signup-quiz')) {
   })
 }
 
-
-
 /* Double Range Slider */
 
-let rangeMin = 1;
-const range = document.querySelector(".range-selected");
-const rangeInput = document.querySelectorAll(".range-input input");
-const rangePrice = document.querySelectorAll(".peoples__filter-range__numbers input");
+function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, '#ECECEC', '#EB477B', controlSlider);
+  if (from > to) {
+      fromSlider.value = to;
+      fromInput.value = to;
+  } else {
+      fromSlider.value = from;
+  }
+}
+  
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, '#ECECEC', '#EB477B', controlSlider);
+  setToggleAccessible(toInput);
+  if (from <= to) {
+      toSlider.value = to;
+      toInput.value = to;
+  } else {
+      toInput.value = from;
+  }
+}
 
-rangeInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minRange = parseInt(rangeInput[0].value);
-    let maxRange = parseInt(rangeInput[1].value);
-    console.log('minRange', minRange);
-    console.log('maxRange', maxRange);
-    if (maxRange - minRange < rangeMin) {     
-      if (e.target.className === "min") {
-        rangeInput[0].value = maxRange - rangeMin;        
-      } else {
-        rangeInput[1].value = minRange + rangeMin;        
-      }
-    } else {
-      rangePrice[0].value = minRange;
-      rangePrice[1].value = maxRange;
-      range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
-      range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
-    }
-  });
-});
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+const [from, to] = getParsed(fromSlider, toSlider);
+fillSlider(fromSlider, toSlider, '#ECECEC', '#EB477B', toSlider);
+if (from > to) {
+  fromSlider.value = to;
+  fromInput.value = to;
+} else {
+  fromInput.value = from;
+}
+}
 
-rangePrice.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minPrice = rangePrice[0].value;
-    let maxPrice = rangePrice[1].value;
-    if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === "min") {
-        rangeInput[0].value = minPrice;
-        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-      } else {
-        rangeInput[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-      }
-    }
-  });
-});
+function controlToSlider(fromSlider, toSlider, toInput) {
+const [from, to] = getParsed(fromSlider, toSlider);
+fillSlider(fromSlider, toSlider, '#ECECEC', '#EB477B', toSlider);
+setToggleAccessible(toSlider);
+if (from <= to) {
+  toSlider.value = to;
+  toInput.value = to;
+} else {
+  toInput.value = from;
+  toSlider.value = from;
+}
+}
+
+function getParsed(currentFrom, currentTo) {
+const from = parseInt(currentFrom.value, 10);
+const to = parseInt(currentTo.value, 10);
+return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+  const rangeDistance = to.max-to.min;
+  const fromPosition = from.value - to.min;
+  const toPosition = to.value - to.min;
+  controlSlider.style.background = `linear-gradient(
+    to right,
+    ${sliderColor} 0%,
+    ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+    ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+    ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+    ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+    ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+const toSlider = document.querySelector('#toSlider');
+if (Number(currentTarget.value) <= 0 ) {
+  toSlider.style.zIndex = 2;
+} else {
+  toSlider.style.zIndex = 0;
+}
+}
+
+const fromSlider = document.querySelector('#fromSlider');
+const toSlider = document.querySelector('#toSlider');
+const fromInput = document.querySelector('#fromInput');
+const toInput = document.querySelector('#toInput');
+fillSlider(fromSlider, toSlider, '#ECECEC', '#EB477B', toSlider);
+setToggleAccessible(toSlider);
+
+fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+const rangeNumbersDisplay = document.querySelectorAll('.peoples__filter-range__numbers span');
+
+function updateRangeNumbersDisplay(elements, from, to) {
+  if (rangeNumbersDisplay) {
+    rangeNumbersDisplay[0].innerHTML = fromInput.value;
+    rangeNumbersDisplay[1].innerHTML = toInput.value;
+  }
+} 
+
+updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
+
+fromSlider.addEventListener('input', (e) => {
+  updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
+})
+
+toSlider.addEventListener('input', (e) => {
+  updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
+})
