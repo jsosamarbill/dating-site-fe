@@ -72,6 +72,7 @@ if (document.querySelector('.signup-quiz')) {
   })
 }
 
+
 /* Double Range Slider */
 
 function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
@@ -150,33 +151,39 @@ if (Number(currentTarget.value) <= 0 ) {
 }
 }
 
-const fromSlider = document.querySelector('#fromSlider');
-const toSlider = document.querySelector('#toSlider');
-const fromInput = document.querySelector('#fromInput');
-const toInput = document.querySelector('#toInput');
-fillSlider(fromSlider, toSlider, '#ECECEC', '#EB477B', toSlider);
-setToggleAccessible(toSlider);
-
-fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
-toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
-toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
-
-const rangeNumbersDisplay = document.querySelectorAll('.peoples__filter-range__numbers span');
-
 function updateRangeNumbersDisplay(elements, from, to) {
-  if (rangeNumbersDisplay) {
-    rangeNumbersDisplay[0].innerHTML = fromInput.value;
-    rangeNumbersDisplay[1].innerHTML = toInput.value;
+  if (elements) {
+    elements[0].innerHTML = from.value;
+    elements[1].innerHTML = to.value;
   }
-} 
+}
 
-updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
+const filterRangeOnPage = document.querySelector('.peoples__filter-range');
 
-fromSlider.addEventListener('input', (e) => {
+if (filterRangeOnPage) {
+  const fromSlider = document.querySelector('#fromSlider');
+  const toSlider = document.querySelector('#toSlider');
+  const fromInput = document.querySelector('#fromInput');
+  const toInput = document.querySelector('#toInput');
+  fillSlider(fromSlider, toSlider, '#ECECEC', '#EB477B', toSlider);
+  setToggleAccessible(toSlider);
+  
+  fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+  toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+  fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+  toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+  
+  const rangeNumbersDisplay = document.querySelectorAll('.peoples__filter-range__numbers span');
+  
   updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
-})
+  
+  fromSlider.addEventListener('input', (e) => {
+    updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
+  })
+  
+  toSlider.addEventListener('input', (e) => {
+    updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
+  })
+}
 
-toSlider.addEventListener('input', (e) => {
-  updateRangeNumbersDisplay(rangeNumbersDisplay, fromInput, toInput);
-})
+

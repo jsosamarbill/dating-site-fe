@@ -292,9 +292,12 @@ a:not(.button):hover {
   z-index: 1000;
 }
 
-.header-mnml + section,
-.header + section {
+.header-mnml + section {
   padding-top: 190px;
+}
+
+.header + section {
+  padding-top: 90px;
 }
 
 .header-mnml .header-mnml__container {
@@ -1328,6 +1331,10 @@ input[type="range"] {
   padding-bottom: 60px;
 }
 
+.profile__info {
+  height: 100%;
+}
+
 .profile__pictures h5,
 .profile__info__section h5,
 h5.title-small {
@@ -1343,10 +1350,12 @@ h5.title-small {
 }
 
 .profile__pictures__main {
-  width: 300px;
-  height: 300px;
-  min-width: 300px;
-  min-height: 300px;
+  width: 100%;
+  height: 280px;
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .profile__pictures__main img {
@@ -1354,6 +1363,7 @@ h5.title-small {
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
+  max-width: 300px;
 }
 
 .profile__pictures__main-add {
@@ -1404,8 +1414,8 @@ h5.title-small {
 }
 
 .profile__pictures__sidebar > div {
-  width: 145px;
-  height: 145px;
+  max-width: 145px;
+  max-height: 145px;
 }
 
 .profile__pictures__sidebar__img {
@@ -1437,6 +1447,7 @@ h5.title-small {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-width: 145px;
 }
 
 .profile__pictures__sidebar__add button {
@@ -1488,12 +1499,12 @@ h5.title-small {
   padding: 30px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px
-   solid var(--gray-light-2);
+  border-bottom: 1px solid var(--gray-light-2);
+  flex-wrap: wrap;
 }
 
 .profile__info__more .form__select {
-
+  padding: 10px 0;
 }
 
 .profile__info__save button {
@@ -1712,7 +1723,12 @@ h5.title-small {
 
 /* App card */
 
+section.credits {
+  background: var(--pink-light);
+}
+
 .app__card {
+  background: var(--white);
   border-radius: 16px;
   -webkit-box-shadow: 0px 5px 62px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 5px 62px 0px rgba(0,0,0,0.15);
@@ -1783,7 +1799,7 @@ h5.title-small {
   line-height: 2;
 }
 
-.icon-coin img {
+.icon-small-coin img {
   width: 24px;
   height: auto;
 }
