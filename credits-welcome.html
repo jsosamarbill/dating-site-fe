@@ -23,21 +23,7 @@
 
 <body class="body">
 
-  <header class="header-mnml d-none">
-    <div class="header-mnml__container container">
-      <div class="header__logo-ribbon">
-        <div class="header__logo-ribbon-wrapper">
-          <img src="img/logo.png" alt="">
-          <span>Flame</span>
-        </div>
-      </div>
-      <div class="header__login">
-        <a href="" class="button button-small button-white">Log in</a>
-      </div>
-    </div>
-  </header>
-
-  <header class="header">
+  <header class="header d-none">
     <div class="header__container container">
       
       <a class="header__logo header__logo-black" href="#">
@@ -104,115 +90,73 @@
     </div>
   </header>
 
-  <section class="profile">
-    <div class="profile__container container">
-      <div class="row">
-
-        <div class="profile__main col-12 col-lg-6">
-          <div class="profile__info">
-              <div class="profile__info__body">
-
-                
-
-                  <div class="form-element stacked mb-4">
-                    <div class="form-label">
-                      <label for="email">
-                        Email
-                      </label>
-                    </div>
-                    <div class="form-input">
-                      <p>user@email.com</p>
-                    </div>
-                  </div>
-
-                  <div class="form-element stacked my-4">
-                    <div class="form-label">
-                      <label for="email">
-                        Email
-                      </label>
-                    </div>
-                    <div class="form-input">
-                      <input class="form-control" type="email" name="email">
-                    </div>
-                  </div>
-
-                  <div class="form-element stacked my-4 pb-4">
-                    <div class="form-label">
-                      <label for="email">
-                        Email
-                      </label>
-                    </div>
-                    <div class="form-input">
-                      <input class="form-control" type="email" name="email">
-                    </div>
-                  </div>
-
-                  <div class="form-element d-flex justify-content-end mt-4 pt-4">
-                    <div class="form-input">
-                      <button class="button button-small mx-0 w-100">
-                        Update email
-                      </button>
-                    </div>
-                  </div>
-                
-              </div>
-          </div>   
+  <header class="header-mnml">
+    <div class="header-mnml__container container">
+      <div class="header__logo-ribbon">
+        <div class="header__logo-ribbon-wrapper">
+          <img src="img/logo.png" alt="">
+          <span>Flame</span>
         </div>
-
-        <div class="profile__main col-12 col-lg-6">
-          <div class="profile__info">
-              <div class="profile__info__body">
-
-                  <div class="form-element stacked mb-4">
-                    <div class="form-label">
-                      <label for="email">
-                        Email
-                      </label>
-                    </div>
-                    <div class="form-input">
-                      <p>user@email.com</p>
-                    </div>
-                  </div>
-
-                  <div class="form-element stacked my-4">
-                    <div class="form-label">
-                      <label for="email">
-                        Email
-                      </label>
-                    </div>
-                    <div class="form-input">
-                      <input class="form-control" type="email" name="email">
-                    </div>
-                  </div>
-
-                  <div class="form-element stacked my-4 pb-4">
-                    <div class="form-label">
-                      <label for="email">
-                        Email
-                      </label>
-                    </div>
-                    <div class="form-input">
-                      <input class="form-control" type="email" name="email">
-                    </div>
-                  </div>
-
-                  <div class="form-element d-flex justify-content-end mt-4 pt-4">
-                    <div class="form-input">
-                      <button class="button button-small mx-0 w-100">
-                        Update email
-                      </button>
-                    </div>
-                  </div>
-                
-              </div>
-          </div>   
-        </div>
-        
-    
+      </div>
+      <div class="header__login">
+        <a href="" class="button button-small button-white">Log in</a>
       </div>
     </div>
-  </section>
+  </header>
 
+
+  <section class="credits bg-pink">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-lg-6">
+            <div class="app__card">
+              <div class="app__card__body">
+                <div class="credits-welcome">
+                  <div class="credits-welcome__top">
+                    <img src="img/icon-big--coin.png" alt="">
+                    <h3><strong>10 credits are yours</strong></h3>
+                    <p>Magna ut reprehenderit nulla labore non minim dolore <strong>cupidatat officia</strong> enim. Veniam ad labore elit veniam.</p>
+                    
+                    <div class="credits-welcome__plans-row">  
+                      <div class="credits-welcome__plan">
+                        <div class="credits-welcome__plan-header">
+                          <h4 class="text-uppercase">Free</h4>
+                          <p>free usage</p>
+                        </div>
+                        <div class="credits-welcome__plan-body">
+                          <ul>
+                            <li>👤 Profile browsing</li>
+                            <li>👍🏼 Unlimited likes</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="credits-welcome__plan">
+                        <div class="credits-welcome__plan-header">
+                          <h4 class="text-uppercase">Credits <span class="icon-small-coin"><img src="img/icon--coin.png" alt=""></span></h4>
+                          <p>usage with credits</p>
+                        </div>
+                        <div class="credits-welcome__plan-body">
+                          <ul>
+                            <li>💬 Unlimited chatting</li>
+                            <li>💟 Stickers</li>
+                            <li>📷 Media files</li>
+                            <li>💎 Exclusive content</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="app__card__footer d-flex justify-content-center">
+                <button class="button button-wider">Explore now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  
   <footer class="footer">
     <div class="footer__container container">
       <div class="footer__logo-section">
