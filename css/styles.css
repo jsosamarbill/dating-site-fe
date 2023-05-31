@@ -256,6 +256,7 @@ a:not(.button):hover {
   color: var(--gray);
   font-weight: normal;
   padding-top: 5px;
+  margin: 0;
 }
 
 
@@ -319,6 +320,11 @@ a:not(.button):hover {
 .dropdown-toggle:after {
   display: none;
 }
+
+.header .nav-link {
+  padding: 0;
+}
+
 /* Common components */
 
 .trait-group {}
@@ -484,6 +490,18 @@ a:not(.button):hover {
   display: flex;
 }
 
+@media screen and (min-width: 992px) {
+  .header__nav-main-wrapper {
+    margin-left: calc(160px + 5vw);
+  }
+}
+
+.header .navbar-toggler {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
 .header__logo-ribbon {
   width: 156px;
   height: 190px;
@@ -546,6 +564,47 @@ a:not(.button):hover {
   }
 }
 
+.header .navbar-collapse {
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.header .app-button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.header .dropdown-menu {
+  border-radius: 16px;
+  border: 1px solid var(--pink);
+  left: unset;
+  right: 0;
+  min-width: 13rem;
+  margin-top: 20px;
+}
+
+.header .dropdown-menu:before {
+  content: '';
+  width: 28px;
+  height: 35px;
+  background-image: url('/img/sub-menu-arrow.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 40px;
+  top: -34px;
+  z-index: 1;
+}
+
+.header .dropdown-menu .dropdown-divider {
+  background: var(--gray-light);
+}
+
+.header .dropdown-item {
+  color: var(--black);
+  font-weight: normal;
+}
 /* Footer */
 
 .footer {
