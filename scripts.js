@@ -5,6 +5,7 @@ const headerMnml = document.querySelector('.header-mnml');
 
 const nextButton = document.querySelector('#quiz-next');
 const skipButton = document.querySelector('#quiz-skip');
+const backButton = document.querySelector('#quiz-back');
 const submitButton = document.querySelector('#quiz-submit');
 const totalStepsCounter = document.querySelector('#steps-total');
 const currentStepIndicator = document.querySelector('#steps-current');
@@ -29,11 +30,13 @@ function updateStatusDisplay() {
   } else if (currentStep == 0) {
     nextButton.classList.remove('d-none')
     skipButton.classList.add('d-none')
+    backButton.classList.add('d-none')
     submitButton.classList.add('d-none')
     // In all other instances, display both buttons 
   } else {
     nextButton.classList.remove('d-none')
     skipButton.classList.remove('d-none')
+    backButton.classList.remove('d-none')
     submitButton.classList.add('d-none')
   }
 }
@@ -67,6 +70,20 @@ if (document.querySelector('.signup-quiz')) {
     // Show next tab 
     contentTabs[currentStep + 1].classList.remove('d-none')
     currentStep += 1
+    updateProgress();
+    updateStatusDisplay();
+  })
+
+  backButton.addEventListener('click', (event) => {
+    // Prevent default on links 
+    event.preventDefault()
+  
+    // Hide current tab 
+    contentTabs[currentStep].classList.add('d-none')
+    
+    // Show previous tab 
+    contentTabs[currentStep - 1].classList.remove('d-none')
+    currentStep -= 1
     updateProgress();
     updateStatusDisplay();
   })
