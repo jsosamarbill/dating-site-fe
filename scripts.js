@@ -14,8 +14,9 @@ const contentTabs = document.querySelectorAll('.signup-quiz__main__content');
 let currentStep = 0;
 
 const updateProgress = () => {
-  progressBarIndicator.style.width = `${Math.round(100/(contentTabs.length - currentStep))}%`;
+  progressBarIndicator.style.width = `${Math.round((100/contentTabs.length) * (currentStep + 1))}%`;
   currentStepIndicator.innerHTML = currentStep + 1;
+  console.log(currentStep);
 }
 
 

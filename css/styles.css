@@ -881,17 +881,17 @@ a:not(.button):hover {
   height: 100%;
 }
 
-.radio-buttons.radio-buttons-gender input[value="male"]::before {
+.radio-buttons.radio-buttons-gender .radio-icon-male::before {
   background-image: url('/img/icon--man.png');
   background-size: 30px;
 }
 
-.radio-buttons.radio-buttons-gender input[value="female"]::before {
+.radio-buttons.radio-buttons-gender .radio-icon-female::before {
   background-image: url('/img/icon--woman.png');
   background-size: 36px;
 }
 
-.radio-buttons.radio-buttons-gender input[value="other"]::before {
+.radio-buttons.radio-buttons-gender .radio-icon-bisex::before {
   background-image: url('/img/icon--bisexual.png');
   background-size: 26px;
 }
@@ -1057,7 +1057,6 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .peoples__filter-select .select select,
 .profile__info__more .select select {
-  border-radius: 48px;
   border: 1px solid var(--gray-light);
 }
 
@@ -1237,7 +1236,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   display: flex;
   padding: 50px 45px 20px 45px;
   height: 100%;
-  min-height: 345px;
+  min-height: 255px;
 }
 
 .signup-quiz__main__content h4 {
@@ -1279,6 +1278,20 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   background: none;
   text-decoration: underline;
   color: var(--gray);
+}
+
+.signup-quiz__datepicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.signup-quiz__datepicker .form-control {
+  font-size: 22px;
+}
+
+.signup-quiz__textarea .form-control {
+  width: 100%;
 }
 
 
@@ -1549,6 +1562,12 @@ input[type="range"] {
   margin-top: 5px;
 }
 
+.peoples__item-details {
+  margin: 5px 0 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+}
 
 /* Profile Area */
 
@@ -2522,3 +2541,12 @@ header + section.credits-welcome {
 .chat__conversation__footer__actions > div:nth-child(1) {
   display: flex;
 }
+
+.profile .form-control:disabled {
+  background-color: var(--white);
+}
+
+.profile textarea.form-control {
+  resize: none;
+}
+
