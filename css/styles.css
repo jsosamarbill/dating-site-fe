@@ -348,6 +348,18 @@ a:not(.button):hover {
   padding: 10px 30px; 
 }
 
+.trait-group.trait-group__gray-fill ul li {
+  background-color: var(--gray-light);
+  border: none;
+  color: var(--gray-2);
+}
+
+.trait-group.trait-group__gradient-fill ul li {
+  background: var(--pink-gradient);
+  border: none;
+  color: var(--white);
+}
+
 
 .tab-buttons {
   display: flex;
@@ -1178,6 +1190,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   place-items: center;
   background: var(--pink-light);
   min-height: calc(100vh);
+  padding-bottom: 10vh;
 }
 
 .signup-quiz__wrapper {
@@ -1804,6 +1817,10 @@ h5.title-small {
   margin-left: 2px;
 }
 
+.profile__info__name .location em strong {
+  padding-right: 5px;
+}
+
 .profile__info__body {
   padding: 30px;
 }
@@ -1870,8 +1887,8 @@ h5.title-small {
 }
 
 .close {
-  background: var(--pink);
-  color: var(--white);
+  background: transparent;
+  color: var(--pink);
   appearance: none;
   border: none;
   border-radius: 50%;
@@ -1879,6 +1896,10 @@ h5.title-small {
   height: 30px;
   font-size: 30px;
   line-height: 0;
+}
+
+.alert {
+  padding: 1em 10px 1em 25px;
 }
 
 .alert-success {
@@ -1889,6 +1910,60 @@ h5.title-small {
   -webkit-box-shadow: 0px 5px 62px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 5px 62px 0px rgba(0,0,0,0.15);
   box-shadow: 0px 5px 62px 0px rgba(0,0,0,0.15);
+}
+
+.profile .form-control:disabled {
+  background-color: var(--white);
+}
+
+.profile textarea.form-control {
+  resize: none;
+}
+
+.form__select-multiple-items .chosen-container-multi .chosen-choices {
+  border: none;
+  background-image: none;
+}
+
+.form__select-multiple-items .chosen-container-active .chosen-choices {
+  box-shadow: none;
+}
+
+.form__select-multiple-items .chosen-container-multi .chosen-choices li.search-choice {
+  background: var(--pink-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  white-space: nowrap;
+  font-size: 14px;
+  margin: 8px 5px;
+  padding: 10px 30px;
+  line-height: unset;
+}
+
+.form__select-multiple-items .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+  filter: brightness(12);
+  top: 6px;
+  right: 10px;
+}
+
+.form__select-multiple-items .chosen-container .chosen-drop {
+  border-radius: 16px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form__select-multiple-items .select svg {
+  width: 19px;
+  height: 10px;
+  stroke-width: 2px;
+  stroke: var(--pink);
+}
+
+.form__select-multiple-items .chosen-container .chosen-results li.highlighted {
+  background-color: var(--gray-2);
+  background-image: var(--pink-gradient);
+  color: #fff;
 }
 
 /* Member */
@@ -2541,12 +2616,3 @@ header + section.credits-welcome {
 .chat__conversation__footer__actions > div:nth-child(1) {
   display: flex;
 }
-
-.profile .form-control:disabled {
-  background-color: var(--white);
-}
-
-.profile textarea.form-control {
-  resize: none;
-}
-

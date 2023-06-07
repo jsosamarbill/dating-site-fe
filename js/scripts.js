@@ -204,4 +204,8 @@ if (filterRangeOnPage) {
   })
 }
 
+if ($('.form__select-multiple-items select')) {
+  $('.form__select-multiple-items select').chosen();
+}
+
 
