@@ -646,8 +646,10 @@
   <script src="js/vendor/chosen.jquery.min.js"></script>
   <script src="/js/scripts.js"></script>
   <script>
-    
-  </script>
+    jQuery(document).ready(function ($) {
+        $('.form__select-multiple-items select').chosen();
+    });
+    </script>
 </body>
 
 

@@ -128,29 +128,14 @@
                 <h4>What is your gender?</h4>
                 <div class="form-element stacked">
                   <div class="form-input">
-                    <div class="form__select peoples__filter-select">
+                    <div class="form__select">
 
-                      <label class="select" for="slct">
-                        <select class="form-control" id="slct" required="required">
-                          <option value="" disabled="disabled" selected="selected">Select option</option>
-                          <option value="#">One</option>
-                          <option value="#">Two</option>
-                          <option value="#">Three</option>
-                          <option value="#">Four</option>
-                          <option value="#">Five</option>
-                          <option value="#">Six</option>
-                          <option value="#">Seven</option>
-                        </select>
-                        <svg>
-                          <use xlink:href="#select-arrow-down"></use>
-                        </svg>
-                      </label>
-                      <!-- SVG Sprites-->
-                      <svg class="sprites">
-                        <symbol id="select-arrow-down" viewbox="0 0 10 6">
-                          <polyline points="1 1 5 5 9 1"></polyline>
-                        </symbol>
-                      </svg>
+                      <select name="gender" class="custom-select gender-select">
+                        <option value="html" data-value="Male">Male</option>
+                        <option value="css" data-value="Female">Female</option>
+                        <option value="javascript" data-value="Not specified">Not specified</option>
+                      </select>
+                      
                     </div>
                   </div>
                 </div>

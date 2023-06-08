@@ -14,6 +14,7 @@
 
   <!-- Libs -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/vendor/chosen/chosen.css">
 
   <!-- Theme style sheets -->
   <link rel="stylesheet" href="css/colors.css">
@@ -237,6 +238,192 @@
 
       </div>
 
+      <div class="row">
+        <div class="col-6">
+          <pre>Checkbox group</pre>
+          <div class="checkbox-group">
+                      
+            <ul class="ks-cboxtags">
+
+              <li>
+                <input type="checkbox" id="traits-checkboxOne" value="honest" checked><label for="traits-checkboxOne">honest</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxTwo" value="shy"><label for="traits-checkboxTwo">shy</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxThree" value="loyal" checked><label for="traits-checkboxThree">loyal</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxFour" value="funny"><label for="traits-checkboxFour">funny</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxFive" value="caring"><label for="traits-checkboxFive">caring</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxSix" value="kind" ><label for="traits-checkboxSix">kind</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxSeven" value="calm"><label for="traits-checkboxSeven">calm</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxEight" value="adventureous"><label for="traits-checkboxEight">adventureous</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxNine" value="moody"><label for="traits-checkboxNine">moody</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxTen" value="spontaenous"><label for="traits-checkboxTen">spontaneous</label>
+              </li>
+              
+              <li 
+              class="ks-selected"><input type="checkbox" id="traits-checkboxEleven" value="curious"><label for="traits-checkboxEleven">curious</label>
+            </li>
+            
+              <li>
+                <input type="checkbox" id="traits-checkboxTwelve" value="confident"><label for="traits-checkboxTwelve">confident</label>
+              </li>
+              
+              <li>
+                <input type="checkbox" id="traits-checkboxThirteen" value="thoughtful"><label for="traits-checkboxThirteen">thoughtful</label>
+              </li>
+                                
+            </ul>
+          
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <pre>Gender radio buttons</pre>
+          <div class="radio-buttons radio-buttons-gender">
+            <div class="radio-button__container">
+              <input class="radio-icon-male" label="Male" type="radio" name="gender" value="male">
+              <label for="gender">
+                Men
+              </label>
+            </div>
+            <div class="radio-button__container">
+              <input class="radio-icon-female" label="Female" type="radio" name="gender" value="female">
+              <label for="gender">
+                Women
+              </label>
+            </div>
+            <div class="radio-button__container">
+              <input class="radio-icon-bisex" label="Other" type="radio" name="gender" value="other">
+              <label for="gender">
+                Both
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6" style="margin-top: 50px;">
+          <pre>Select with dropdown</pre>
+          <div class="form__select form__select-multiple-items">   
+            <label class="select" for="multipleitems">
+              <select class="form-control" id="multipleitems" required="required" multiple>
+                <option value="#">One</option>
+                <option value="#">Two</option>
+                <option value="#" selected>Three</option>
+                <option value="#">Four</option>
+                <option value="#">Five</option>
+                <option value="#">Six</option>
+                <option value="#">Seven</option>
+              </select>
+              <svg>
+                <use xlink:href="#select-arrow-down"></use>
+              </svg>
+            </label>
+            <!-- SVG Sprites-->
+            <svg class="sprites">
+              <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                <polyline points="1 1 5 5 9 1"></polyline>
+              </symbol>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-6">
+          <pre style="margin-top: 60px;">Range slider</pre>
+
+          <div class="form-input">
+            <div class="peoples__filter-range">
+
+              <div class="peoples__filter-range__label">
+                Age
+              </div>
+
+              <div class="range_container">
+                <div class="sliders_control">
+                   <input id="fromSlider" type="range" value="18" min="18" max="90"/>
+                   <input id="toSlider" type="range" value="90" min="18" max="90"/>
+                </div>
+                <div class="form_control">
+                  <div class="form_control_container">
+                      <input class="form_control_container__time__input" type="hidden" id="fromInput" value="18" min="18" max="90" disabled/>
+                    </div>
+                    <div class="form_control_container">
+                      <input class="form_control_container__time__input" type="hidden" id="toInput" value="90" min="18" max="90" disabled/>
+                    </div>
+                </div>
+              </div>
+
+              <div class="peoples__filter-range__numbers">
+                <span class="range-min"></span>
+                -
+                <span class="range-max"></span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <pre style="margin-top: 50px;">Multiple custom select</pre>
+          <section class="sample-content">
+            <select name="language" class="custom-select" multiple>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="sql">SQL</option>
+              <option value="kotlin">Kotlin</option>
+            </select>
+          </section>
+        
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <pre style="margin-top: 60px;">Single custom select with big buttons</pre>
+          <section class="sample-content">
+            <select name="language" class="custom-select gender-select">
+              <option value="html" data-value="Male">Male</option>
+              <option value="css" data-value="Female">Female</option>
+              <option value="javascript" data-value="Not specified">Not specified</option>
+            </select>
+          </section>
+        </div>
+      </div>
    
      
      
@@ -308,7 +495,15 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/vendor/chosen.jquery.min.js"></script>
   <script src="/js/scripts.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+        $('.form__select-multiple-items select').chosen();
+    });
+    </script>
 </body>
 
 

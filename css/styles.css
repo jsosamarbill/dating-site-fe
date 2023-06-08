@@ -198,6 +198,14 @@ a:not(.button):hover {
   color: var(--pink);
 }
 
+.text-green {
+  color: var(--green);
+}
+
+.text-gray {
+  color: var(--gray-2);
+}
+
 .number-big {
   display: block;
   font-size: 2.5em;
@@ -220,9 +228,7 @@ a:not(.button):hover {
   -webkit-text-fill-color: transparent; 
 }
 
-.text-green {
-  color: var(--green);
-}
+
 
 
 /* Application Buttons */
@@ -459,7 +465,8 @@ a:not(.button):hover {
   padding-top: 190px;
 }
 
-.header + section {
+.header + section,
+.alert-container + section {
   padding-top: 90px;
 }
 
@@ -617,6 +624,11 @@ a:not(.button):hover {
   color: var(--black);
   font-weight: normal;
 }
+
+.header .dropdown-item:focus, .dropdown-item:hover {
+  background-color: transparent;
+}
+
 /* Footer */
 
 .footer {
@@ -1180,6 +1192,129 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .range-price input:first-of-type {
   margin-right: 15px;
+}
+
+
+/* Traits Select */
+
+.traits-select {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.traits-select__item {
+  display: inline-block;
+  background-color: var(--gray-light);
+  border: none;
+  color: var(--gray-2);
+  border-radius: 25px;
+  white-space: nowrap;
+  font-size: 14px;
+  margin: 8px 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.traits-select__item:hover {
+  color: var(--pink);
+}
+
+.traits-select__item--selected {
+  border: none;
+  background: var(--pink-gradient);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+/* Gender Select */
+
+.traits-select.gender-select {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.traits-select.gender-select .traits-select__item {
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 5px 20px;
+  text-align: center;
+  margin: 0 2px 35px 2px;
+  border-radius: 77px;
+  font-size: 14px;
+  color: var(--dark);
+  transition: all 0.1s;
+  border: 1px solid var(--gray-2);
+  display: block;
+  width: 82px;
+  height: 82px;
+  background: var(--gray-light);
+  border: none;
+  position: relative;
+}
+
+.traits-select.gender-select .traits-select__item span {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  bottom: -27px;
+  color: black;
+  font-size: 16px;
+}
+
+.traits-select.gender-select .traits-select__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transition: all 0.1s ease-in;
+}
+
+.traits-select.gender-select .traits-select__item:hover::before {
+  transform: scale(110%);
+}
+
+.traits-select.gender-select .traits-select__item[data-value="Male"]::before {
+  background-image: url('/img/icon--man.png');
+  background-size: 30px;
+}
+
+.traits-select.gender-select .traits-select__item[data-value="Female"]::before {
+  background-image: url('/img/icon--woman.png');
+  background-size: 36px;
+}
+
+.traits-select.gender-select .traits-select__item[data-value="Not specified"]::before {
+  background-image: url('/img/icon--bisexual.png');
+  background-size: 26px;
+}
+
+.traits-select.gender-select .traits-select__item--selected {
+  border: none;
+  background: var(--pink-gradient);
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.traits-select.gender-select .traits-select__item--selected.traits-select__item::before {
+  filter: invert(100);
 }
 
 
@@ -1973,7 +2108,7 @@ h5.title-small {
   justify-content: space-between;
 }
 
-.profile__pictures__actions button {
+.profile__pictures__actions a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1992,19 +2127,19 @@ h5.title-small {
   transition: 0.2s transform ease-in;
 }
 
-.profile__pictures__actions button:hover {
+.profile__pictures__actions a:hover {
   transform: translateY(-3px);
 }
 
-.profile__pictures__actions button:hover span img {
+.profile__pictures__actions a:hover span img {
   transform: scale(110%);
 }
 
-.profile__pictures__actions button span {
+.profile__pictures__actions a span {
   margin-right: 5px;
 }
 
-.profile__pictures__actions button span img {
+.profile__pictures__actions a span img {
   width: 20px;
   height: auto;
   transition: 0.2s transform ease-in;
@@ -2615,4 +2750,10 @@ header + section.credits-welcome {
 
 .chat__conversation__footer__actions > div:nth-child(1) {
   display: flex;
+}
+
+/* Message */
+
+.message {
+  padding-top: 10vh;
 }
